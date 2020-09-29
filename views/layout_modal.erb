@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+ <title>Givelist</title>
+ <meta charSet="utf-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="description" content="Here is a description of what Givelist is all about."/>
+ <link href="<%= url('styles/normalize.scss') %>" rel="stylesheet" type="text/css" />
+ <link href="<%= url('styles/main.scss') %>" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="no-scroll">
+ <div id="content">
+  <header>
+   <a href="/"><span class="logo"></span></a>
+   <nav>
+    <a class="button primary" href="#">Sign Up</a>
+    <a class="button" href="#">Log In</a>
+   </nav>
+  </header>
+
+  <main>
+   <section id="dashboard">
+    <div class="row profile">
+     <img src="<%= url('/images/photos/portrait.jpg') %>">
+     <div class="profile-details">
+      <h3>Aubri French</h3>
+      <a href="mailto:aubrifrench@gmail.com">aubrifrench@gmail.com</a>
+      <p>987 Main St.</p>
+      <p>San Diego, CA 92110</p>
+      <p>(858) 431-9559</p>
+     </div>
+     <div class="bio">
+       <p>Hey there! I'm Aubri, and this is the bio on my Givelist profile. I enjoy giving gifts to people and promoting non-profit organizations, which help make the world a better place. Also included in my interests are pizza, puppies, and pool parties! The three P's! Ha!</p>
+     </div>
+    </div>
+
+
+
+    <div class="row dashboard-controls">
+     <ul>
+      <li class="active">
+       <button>Wishlists</button>
+      </li>
+
+      <li>
+       <button>Orders</button>
+      </li>
+     </ul>
+    </div>
+
+
+
+    <div class="row list-of-wishlists-and-orders">
+     <ul>
+       <li class="add-item">
+        <div class="tile folded-corner">
+         <div class="container">
+          <span class="wishlist-icon"></span>
+          <h5>Add Wishlist</h5>
+         </div>
+        </div>
+       </li>
+
+      <li>
+       <div class="tile folded-corner">
+        <img src="<%= url('/images/textures/wishlist.jpg') %>">
+       </div>
+       <h5>Jacob's Birthday List 2018</h5>
+      </li>
+
+      <li class="active">
+       <div class="tile">
+        <img src="<%= url('/images/textures/wishlist.jpg') %>">
+       </div>
+       <h5>Wedding Registry</h5>
+      </li>
+
+      <li>
+       <div class="tile folded-corner">
+        <img src="<%= url('/images/textures/wishlist.jpg') %>">
+       </div>
+       <h5>This is a really long list title just to demonstrate the automatic ellipsis line clamp.</h5>
+      </li>
+     </ul>
+    </div>
+
+
+
+    <div class="row view-wishlist">
+     <div>
+      <h2>Wedding Registry</h2>
+      <div class="hgroup">
+       <button>View as Guest</button>
+       <button>Make Public</button>
+       <fieldset>
+        <span>Sharable Link:</span>
+        <input type="text" value="http://givelist.com/list/j8HE8q9Vbj1Y">
+       </fieldset>
+      </div>
+
+      <ul class="wishlist-items">
+       <li class="wishlist-item add-item">
+        <div class="container">
+         <span class="gift-icon"></span>
+         <h4>Add Item</h4>
+        </div>
+       </li>
+
+       <li class="wishlist-item">
+        <div class="image-container">
+         <img src="<%= url('/images/photos/products/toaster.jpg') %>">
+        </div>
+        <div class="text-container">
+         <h4>AmazonBasics KT-3680 2-Slice Toaster</h4>
+         <p>$29.99</p>
+         <p>This toaster would make a nice addition to our kitchen, which is why you should totally buy it! How else are we going to make hot bread, you know??"</p>
+        </div>
+       </li>
+
+       <li class="wishlist-item">
+        <div class="image-container">
+         <img src="<%= url('/images/photos/products/hot-pot.jpg') %>">
+        </div>
+        <div class="text-container">
+         <h4>Instant Pot LUX60V3 V3 6 Qt 6-in-1 Multi-Use Programmable Hot Pot</h4>
+         <p>$79.99</p>
+         <p>10 quart size.</p>
+        </div>
+       </li>
+
+       <li class="wishlist-item">
+        <div class="image-container">
+         <img src="<%= url('/images/photos/products/toaster.jpg') %>">
+        </div>
+        <div class="text-container">
+         <h4>AmazonBasics KT-3680 2-Slice Toaster</h4>
+         <p>$29.99</p>
+         <p>This toaster would make a nice addition to our kitchen, which is why you should totally buy it! How else are we going to make hot bread, you know??"</p>
+        </div>
+       </li>
+
+       <li class="wishlist-item">
+        <div class="hover-content">
+         <span class="close-icon"></span>
+         <div class="button-container">
+          <button class="primary"><h4>View</h4></button>
+         </div>
+        </div>
+        <div class="image-container">
+         <img src="<%= url('/images/photos/products/hot-pot.jpg') %>">
+        </div>
+        <div class="text-container">
+         <h4>Instant Pot LUX60V3 V3 6 Qt 6-in-1 Multi-Use Programmable Hot Pot</h4>
+         <p>$79.99</p>
+         <p>10 quart size.</p>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+  </main>
+
+  <footer>
+   <ul>
+    <li>© 2018 Givelist, Inc.</li>
+    <li><a href="#">Legal</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+   </ul>
+  </footer>
+
+  <div class="modal-background">
+   <%= yield %>
+  </div>
+
+ </div>
+</body>
+</html>

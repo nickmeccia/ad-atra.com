@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Ad Atra</title>
+  <meta charSet="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Join the uprising."/>
+  <meta name="og:description" content="Join the uprising."/>
+  <!-- <meta name="og:image" content="<%= url('/image/logos/social.png') %>/> -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@"/>
+  <meta name="twitter:title" content="Ad Atra"/>
+  <meta name="twitter:description" content="Join the uprising."/>
+  <!-- <meta name="twitter:image" content="<%= url('/images/logos/social.png') %>"/>  -->
+  <meta name="twitter:image:alt" content="Ad Atra"/>
+  <link href="<%= url('styles/normalize.scss') %>" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href="<%= url('styles/main.scss') %>" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $('.fa-bars').on('click', function () {
+      $('.nav-content-container').toggleClass('open');
+    });
+  </script>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <nav>
+        <ul>
+          <li class="mobile-menu-toggle"><span class="fas fa-bars"></span></li>
+          <li class="logo"><a href="/"><img src="<%= url('/images/adatra/logo-inline-white.png') %>"></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="timeshifted">
+      <%= yield %>
+    </main>
+
+    <footer>
+      
+    </footer>
+  </div>
+
+</body>
+</html>
