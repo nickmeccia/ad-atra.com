@@ -1,31 +1,46 @@
 /* LAYOUT
 -----------------------------------------------------------*/
 
-header {
-  .mobile-menu-toggle {
-    display: none;
-  }
-
-  img {
-    max-height: 48px;
-  }
-
-  li:first-child, li:nth-child(2) {
-    padding-left: 1.3125rem;
-  }
-
-  li {
-    padding: 0.5rem;
-  }
-
-}
-
 #content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
   width: 100%;
+}
+
+header {
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    padding: 0 1.3125rem;
+  }
+
+  li {
+    margin-right: 1.3125rem;
+
+    &:first-child, &:nth-child(2) {
+      flex: 1;
+      padding: 0.5rem 0;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-size: 1.8125rem;
+  }
+
+  img {
+    max-height: 48px;
+  
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
 main {
@@ -61,13 +76,6 @@ section {
   /*}*/
 }
 
-.personal-vendetta-download {
-  .logo {
-    max-width: 500px;
-    width: 100%;
-  }
-}
-
 .slick-arrow {
   height: 0;
   padding: 0;
@@ -83,139 +91,14 @@ section {
   }
 }
 
-/*
-.nav-controls {
-  align-items: center;
-  display: flex;
+.fab {
+  color: $white;
 
-  span {
-    padding: 1rem 1.3125rem;
-    flex: 0 0 13px;
-    vertical-align: middle;
-  
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .logo {
-    flex: 1;
-
-    &:after {
-      content: '';
-      padding: 0;
-    }
-  
-    img {
-      margin: 0 auto;
-      width: auto;
-      height: 20px;
-    }
+  &:hover {
+    color: $cyan;
+    text-decoration: none;
   }
 }
-
-main.timeshifted {
-  flex: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 180px;
-  right: 0;
-
-  ul,li {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-section {
-  height: 100%;
-  overflow-y: scroll;
-
-  img {
-    width: 100%;
-  }
-
-  video {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-.hgroup {
-  margin: 1rem 150px 1.8125rem 150px;
-}
-
-.slick-container, .slick-list, .slick-track {
-  height: 100%;
-}
-
-.slick-slide img {
-  object-fit: cover;
-  width: 100%;
-  height: 99.8%;
-}
-
-.slick-container.comic {
-  height: 80%;
-
-  .slick-list {
-    height: 100%;
-  }
-
-  .slick-slide img {
-    object-fit: contain;
-  }
-}
-
-.slick-arrow {
-  background-color: $off-white;
-  border: 0;
-  border-radius: 50%;
-  font-size: 0;
-  line-height: 0;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-
-  position: absolute;
-  top: 45vh;
-  z-index: 2;
-
-  &:after {
-    font-size: 36px;
-    color: black;
-  }
-
-  &:focus {
-    box-shadow: 0 0 3px 3px $cyan;
-    outline: none;
-    z-index: 12;
-  }
-}
-
-.slick-prev {
-  left: 80px;
-
-  &:after {
-    color: $black;
-    content: '↜';
-    line-height: 1.36rem;
-  }
-}
-
-.slick-next {
-  right: 20px;
-
-  &:after {
-    color: $black;
-    content: '↛';
-    line-height: 1rem;
-  }
-}
-
-*/
 
 img {
   display: block;
@@ -257,3 +140,9 @@ img {
   padding: 0;
 }
 
+.personal-vendetta-download {
+  .logo {
+    max-width: 500px;
+    width: 100%;
+  }
+}

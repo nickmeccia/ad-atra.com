@@ -8,9 +8,20 @@ h2 {
 }
 
 h3 {
-  font-family: "FiraSans-Bold", sans-serif;
+  font-family: "FiraSans-Medium", sans-serif;
   font-size: 1.8125rem;
   line-height: 2.625rem;
+}
+
+a {
+  color: $magenta;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $magenta;
+    text-decoration: underline;
+  }
 }
 
 /*h1 {
@@ -54,21 +65,6 @@ h6, label {
   }
 }
 
-a {
-  color: $primary;
-  text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-    /*color: $primary-hover;*/
-    /*text-decoration: underline;*/
-/*
-    &:after {
-      content: '☞';
-      padding-left: 0.375rem;
-    }
-  }
-}
 
 strong {
   font-family: 'Campton-Bold', sans-serif;
