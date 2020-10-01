@@ -150,3 +150,24 @@ img {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 700px) {
+  header ul {
+    padding: 0;
+  }
+  body {
+    padding: 0 1rem;
+  }
+  footer .container {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header img {
+    max-height: 32px;
+  }
+  header a {
+    font-size: 1rem;
+  }
+}
